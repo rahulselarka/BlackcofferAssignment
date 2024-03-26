@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_green"
+        app:titleTextColor="@android:color/white"
+        app:title="Refine"
+        app:navigationIcon="@drawable/baseline_notifications_active_24"/>
+
+    <TextView
+        android:id="@+id/selectAvailabilityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your Availability"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/availabilitySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectAvailabilityTextView"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/addStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your Status"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/availabilitySpinner"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/statusEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addStatusTextView"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/selectDistanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Hyper local Distance"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/statusEditText"
+        android:layout_marginTop="16dp"/>
+
+    <SeekBar
+        android:id="@+id/distanceSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectDistanceTextView"
+        android:layout_marginTop="8dp"
+        android:max="100"/>
+
+    <TextView
+        android:id="@+id/selectPurposeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Purpose"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/distanceSeekBar"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/purposeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectPurposeTextView"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/businessRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business"/>
+
+        <RadioButton
+            android:id="@+id/hobbiesRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobbies"/>
+
+        <RadioButton
+            android:id="@+id/coffeeRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purposeRadioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/dark_green_oval_button"
+        android:text="Save and Explore"/>
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:background="@color/dark_green"
+            android:id="@+id/refineTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Refine"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <TextView
+            android:background="@color/dark_green"
+            android:id="@+id/exploreTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Explore"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
